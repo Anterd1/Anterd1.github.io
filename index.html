@@ -42,6 +42,22 @@
             margin: 0;
             padding: 0;
         }
+        .parallax {
+          background-image: url('Media/fondo2.jpg');
+          height: 100vh;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          overflow: hidden;
+          position: relative;
+        }
+        .parallax-text {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          top: 50%;
+          transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -81,8 +97,10 @@
           </div>
         </div>
     </nav>
-    <div class="container-fluid full-height center-xy ">
-      <h1>Proximamente</h1>
+    <div class="container-fluid full-height center-xy pallarax ">
+      <div class="parallax-text">
+        <h1>Proximamente</h1>
+      </div>
   </div>
     <div class="container">
       <div class="row justify-content-center">
@@ -122,7 +140,7 @@
                   <div class="card">
                       <img src="Media/img4.JPG" class="card-img-top card-img-custom" alt="...">
                       <div class="card-body">
-                          <h5 class="card-title">Título 4</h5>
+                          <h5 class="card-title">Porque te amo mucho</h5>
                           <p class="card-text">Descripción de la card 4.</p>
                           <a href="#" class="btn btn-primary">Ir a detalle</a>
                       </div>
@@ -134,5 +152,13 @@
   </div>
   
 </body>
+<script>
+  document.addEventListener('scroll', function () {
+    const parallaxText = document.querySelector('.parallax-text');
+    const scrollPosition = window.scrollY;
+
+    parallaxText.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+  });
+</script>
 <script src="js/bootstrap.js"></script>
 </html>
