@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Css/bootstrap.css">
+  
     <style>
        .card-img-custom {
         height: 200px;
@@ -18,6 +19,28 @@
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+        .full-height {
+            height: 100vh;
+            background-image: url('Media/fondo2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .center-xy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+          color: white;
+          font-size: 3.5em;
+        }
+        .full-width {
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -58,7 +81,7 @@
           </div>
         </div>
     </nav>
-    <div class="container full-height center-xy">
+    <div class="container-fluid full-height center-xy ">
       <h1>Proximamente</h1>
   </div>
     <div class="container">
